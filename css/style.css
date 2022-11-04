@@ -24,10 +24,16 @@ GENERAL STYLES */
 
 /* * ROOT */
 :root{
+    /* ? Colors */
     --header-bg-color: black;
     --main-bg-color:#141922;
     --aside-bg-color:#080b12;
     --footer-bg-color:#282828;
+
+
+    /* ? Dimensions */
+    --header-width: 55px;
+    --footer-height: 55px;
 }
 
 
@@ -52,8 +58,8 @@ SPECIFIC STYLES */
 /* * HEADER */
 header{
     background-color: var(--header-bg-color);
-    width: 55px;
-    height: calc(100vh - 55px);
+    width: var(--header-width);
+    height: calc(100vh - var(--footer-height));
 }
 
 
@@ -61,8 +67,8 @@ header{
 /* * MAIN */
 main{
     background-color: var(--main-bg-color);
-    height: calc(100vh - 55px);
-    width: calc(100% - 55px);
+    height: calc(100vh - var(--footer-height));
+    width: calc(100% - var(--header-width));
 }
 
 
@@ -82,14 +88,59 @@ footer{
 RESPONSIVENESS */
 
 /* * SMALL */
-@media screen and (min-width:576px){}
+@media screen and (min-width:576px){
+    /* * GENERAL STYLES */
+    :root{
+        --header-width: 230px;
+    }
+
+
+
+    /* * SPECIFIC STYLES */
+    
+    /* ? HEADER */
+
+
+    /* ? MAIN */
+
+
+    /* ? FOOTER */
+}
 
 
 
 /* * MEDIUM */
-@media screen and (min-width:768px){}
+@media screen and (min-width:768px){
+        /* * GENERAL STYLES */
+
+
+
+        /* * SPECIFIC STYLES */
+        
+        /* ? HEADER */
+
+
+        /* ? MAIN */
+
+
+        /* ? FOOTER */
+}
 
 
 
 /* * LARGE */
-@media screen and (min-width:992px){}
+@media screen and (min-width:992px){
+        /* * GENERAL STYLES */
+
+
+
+        /* * SPECIFIC STYLES */
+        
+        /* ? HEADER */
+
+
+        /* ? MAIN */
+
+
+        /* ? FOOTER */
+}
