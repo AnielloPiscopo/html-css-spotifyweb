@@ -1,3 +1,13 @@
+/* !-------------------------------------------------------------------------------------------------------
+MOMENTANEAL CHANGES */
+
+
+
+
+
+
+
+
 /* **********************************************************
 GENERAL STYLES */
 
@@ -14,7 +24,10 @@ GENERAL STYLES */
 
 /* * ROOT */
 :root{
-
+    --header-bg-color: black;
+    --main-bg-color:#141922;
+    --aside-bg-color:#080b12;
+    --footer-bg-color:#282828;
 }
 
 
@@ -26,6 +39,10 @@ GENERAL STYLES */
     display: flex;
 }
 
+.d_flex.wrap{
+    flex-wrap: wrap;
+}
+
 
 
 
@@ -33,14 +50,29 @@ GENERAL STYLES */
 SPECIFIC STYLES */
 
 /* * HEADER */
+header{
+    background-color: var(--header-bg-color);
+    width: 55px;
+    height: calc(100vh - 55px);
+}
 
 
 
 /* * MAIN */
+main{
+    background-color: var(--main-bg-color);
+    height: calc(100vh - 55px);
+    width: calc(100% - 55px);
+}
 
 
 
 /* * FOOTER */
+footer{
+    background-color: var(--footer-bg-color);
+    width: 100%;
+    height: 55px;
+}
 
 
 
