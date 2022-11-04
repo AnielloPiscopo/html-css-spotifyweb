@@ -3,11 +3,17 @@ MOMENTANEAL CHANGES */
 main>*{
     background-color: red;
     border-bottom: 1px solid;
-    height: 5rem;
+    height: 10rem;
 }
 
 nav{
-    height: 2em;
+    height: 2rem;
+}
+
+.column{
+    background-color: green;
+    height: 3rem;
+    border:  1px solid;
 }
 
 
@@ -43,6 +49,7 @@ GENERAL STYLES */
     /* ? DIMENSIONS */
     --header-width: 55px;
     --footer-height: 61px;
+    --main-vw:calc(100vw - var(--header-width));
 }
 
 
@@ -84,7 +91,13 @@ header{
 main{
     background-color: var(--main-bg-color);
     height: calc(100vh - var(--footer-height));
-    width: calc(100% - var(--header-width));
+    width: var(--main-vw);
+    overflow-y: scroll;
+}
+
+main section.columns-container .column{
+    width: calc(var(--main-vw)/2);
+    height: calc(var(--main-vw)/2);
 }
 
 /* ? ASIDE */
@@ -145,6 +158,10 @@ RESPONSIVENESS */
 
 
         /* ? MAIN */
+        main section.columns-container .column{
+            width: calc(var(--main-vw)/4);
+            height: calc(var(--main-vw)/2);
+        }
 
 
         /* ? FOOTER */
@@ -164,6 +181,10 @@ RESPONSIVENESS */
 
 
         /* ? MAIN */
+        main section.columns-container .column{
+            width: calc(var(--main-vw)/6);
+            height: calc(var(--main-vw)/2);
+        }
 
 
         /* ? FOOTER */
