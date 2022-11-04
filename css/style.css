@@ -1,0 +1,63 @@
+/* **********************************************************
+GENERAL STYLES */
+
+/* * UNIVERSAL SELECTOR */
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/* * ROOT */
+:root{
+
+}
+
+
+
+/* * CLASSES */
+
+/* ? Displays */
+.d_flex{
+    display: flex;
+}
+
+
+
+
+/* ***************************************************************
+SPECIFIC STYLES */
+
+/* * HEADER */
+
+
+
+/* * MAIN */
+
+
+
+/* * FOOTER */
+
+
+
+
+
+/* *************************************************************
+RESPONSIVENESS */
+
+/* * SMALL */
+@media screen and (min-width:576px){}
+
+
+
+/* * MEDIUM */
+@media screen and (min-width:768px){}
+
+
+
+/* * LARGE */
+@media screen and (min-width:992px){}
