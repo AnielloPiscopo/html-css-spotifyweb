@@ -158,6 +158,7 @@ RESPONSIVENESS */
     /* ? ROOT */
     :root{
         --header-width: 160px;
+        --card-margin:1rem;
     }
 
 
