@@ -1,19 +1,7 @@
 /* !-------------------------------------------------------------------------------------------------------------------------------------------
 MOMENTANEAL CHANGES */
-main>*{
-    background-color: red;
-    border-bottom: 1px solid;
-    height: 30rem;
-}
-
 nav{
     height: 2rem;
-}
-
-.img-container{
-    background-color: yellow;
-    width: 100%;
-    border: 1em solid;
 }
 
 
@@ -49,16 +37,19 @@ GENERAL STYLES */
     /* ? DIMENSIONS */
     --header-width: 32px;
     --footer-height: 61px;
-    --column-numbers:2;
-    --main-vw:calc(100vw - var(--header-width));
-    --column-vw:calc(var(--main-vw)/var(--column-numbers));
+    --card-numbers:2;
+    --card-margin:1rem;
 }
 
 
 
 /* * TAG HTML */
 body{
-    font-family: sans-serif;
+    font-family: 'Poppins';
+}
+
+img{
+    width: 100%;
 }
 
 
@@ -72,6 +63,12 @@ body{
 
 .d_flex.wrap{
     flex-wrap: wrap;
+}
+
+
+/* ? TEXT */
+.text-centered{
+    text-align: center;
 }
 
 
@@ -93,22 +90,25 @@ header{
 main{
     background-color: var(--main-bg-color);
     height: calc(100vh - var(--footer-height));
-    width: var(--main-vw);
-    overflow-y: scroll;
-}
-
-main section.columns-container .column{
-    width: var(--column-vw);
-}
-
-main section.columns-container .column .img-container{
-    height: var(--column-vw);
+    width: calc(100% - var(--header-width));
+    overflow-y: auto;
 }
 
 /* ? ASIDE */
 main aside{
     height: var(--footer-height);
     background-color: var(--aside-bg-color);
+}
+
+
+/* ? CARDS */
+#cards .cards-container .card{
+    width: calc(100%/ var(--card-numbers) - var(--card-margin));
+    margin-right: var(--card-margin);
+}
+
+#cards .cards-container .card .img-container img{
+    max-width: 100%;
 }
 
 
@@ -157,7 +157,7 @@ RESPONSIVENESS */
 
         /* ? ROOT */
         :root{
-            --column-numbers:4;
+            --card-numbers:4;
         }
 
 
@@ -180,7 +180,7 @@ RESPONSIVENESS */
         /* * GENERAL STYLES */
 
         :root{
-            --column-numbers:6;
+            --card-numbers:6;
         }
 
 
