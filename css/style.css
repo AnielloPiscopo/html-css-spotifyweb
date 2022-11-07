@@ -41,7 +41,7 @@ GENERAL STYLES */
 
     /* ? DIMENSIONS */
     --header-width: 50px;
-    --footer-height: 61px;
+    --footer-height: 100px;
     --card-margin:0.5rem;
 }
 
@@ -102,6 +102,14 @@ h3{
     text-transform: uppercase;
 }
 
+.btn{
+    text-transform: uppercase;
+}
+
+
+
+
+
 
 
 
@@ -131,6 +139,21 @@ main aside{
     background-color: var(--aside-bg-color);
 }
 
+main aside.d_flex{
+    justify-content: end;
+}
+
+main aside .btn{
+    color: var(--secondary-color-text);
+    border: 1px solid var(--secondary-color-text);
+    padding: 1rem 3rem;
+    border-radius: 20rem;
+}
+
+main aside.d_flex .btn{
+    align-self:center;
+}
+
 
 /* ? NAVBAR */
 main nav{
@@ -142,6 +165,7 @@ main nav ul li{
     width: calc(100%/var(nav-li-number) - 1.5rem);
     padding-bottom: 2rem;
     font-weight: bold;
+    font-size: 0.8rem;
 }
 
 
