@@ -90,7 +90,6 @@ h3{
 
 .d_flex.center{
     justify-content: center;
-    align-items: center;
 }
 
 
@@ -135,22 +134,19 @@ main aside{
 
 /* ? NAVBAR */
 main nav{
-    height: 4rem;
-}
-
-main nav ul{
-    height: 100%;
+    padding: 1.5rem 2rem 0 2rem;
 }
 
 main nav ul li{
     margin-right: 1.5rem;
     width: calc(100%/var(nav-li-number) - 1.5rem);
+    padding-bottom: 2rem;
 }
 
 
 /* ? CARDS */
 #cards>section{
-    padding: 1.1rem 2rem 0 1.5rem;
+    padding: 0 2rem 0 1.5rem;
 }
 
 #cards span{
@@ -165,7 +161,7 @@ main nav ul li{
 
 /* ? Cards Container */
 #cards .cards-container{
-    padding-bottom: 1.1rem;
+    padding-bottom: 2rem;
 }
 
 #cards .cards-container .card{
