@@ -1,7 +1,11 @@
 /* !-------------------------------------------------------------------------------------------------------------------------------------------
 MOMENTANEAL CHANGES */
 nav{
-    height: 2rem;
+    height: 4rem;
+}
+
+ul{
+    height: 100%;
 }
 
 
@@ -36,10 +40,14 @@ GENERAL STYLES */
     --secondary-color-text:#f0f0f0;
 
 
+    /* ? NUMBERS */
+    --cards-number:2;
+    --nav-li-number:4;
+
+
     /* ? DIMENSIONS */
     --header-width: 32px;
     --footer-height: 61px;
-    --card-numbers:2;
     --card-margin:0.5rem;
 }
 
@@ -48,6 +56,7 @@ GENERAL STYLES */
 /* * TAG HTML */
 body{
     font-family: 'Poppins';
+    min-width: 535px;
 }
 
 body *{
@@ -56,6 +65,14 @@ body *{
 
 img{
     width: 100%;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
 }
 
 h1,
@@ -77,10 +94,19 @@ h3{
     flex-wrap: wrap;
 }
 
+.d_flex.center{
+    justify-content: center;
+    align-items: center;
+}
+
 
 /* ? TEXT */
 .text-centered{
     text-align: center;
+}
+
+.uppercase{
+    text-transform: uppercase;
 }
 
 
@@ -113,6 +139,13 @@ main aside{
 }
 
 
+/* ? NAVBAR */
+main nav ul li{
+    margin-right: 1.5rem;
+    width: calc(100%/var(nav-li-number) - 1.5rem);
+}
+
+
 /* ? CARDS */
 #cards>section{
     padding: 1.1rem 2rem 0 1.5rem;
@@ -134,7 +167,7 @@ main aside{
 }
 
 #cards .cards-container .card{
-    width: calc(100%/ var(--card-numbers) - var(--card-margin));
+    width: calc(100%/ var(--cards-number) - var(--card-margin));
     margin-right: var(--card-margin);
 }
 
@@ -176,6 +209,7 @@ RESPONSIVENESS */
     /* ? ROOT */
     :root{
         --header-width: 160px;
+        --nav-li-number:3;
         --card-margin:1rem;
     }
 
@@ -200,7 +234,8 @@ RESPONSIVENESS */
 
         /* ? ROOT */
         :root{
-            --card-numbers:4;
+            --cards-number:4;
+            --nav-li-number:5;
         }
 
 
@@ -223,7 +258,8 @@ RESPONSIVENESS */
         /* * GENERAL STYLES */
 
         :root{
-            --card-numbers:6;
+            --cards-number:6;
+            --nav-li-number:6;
         }
 
 
