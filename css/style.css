@@ -40,7 +40,7 @@ GENERAL STYLES */
     --header-width: 32px;
     --footer-height: 61px;
     --card-numbers:2;
-    --card-margin:1rem;
+    --card-margin:0.5rem;
 }
 
 
@@ -114,6 +114,11 @@ main aside{
 
 
 /* ? CARDS */
+
+#cards .cards-container{
+    padding: 2rem 2rem 1rem 1.5rem;
+}
+
 #cards .cards-container .card{
     width: calc(100%/ var(--card-numbers) - var(--card-margin));
     margin-right: var(--card-margin);
@@ -121,6 +126,13 @@ main aside{
 
 #cards .cards-container .card .img-container img{
     max-width: 100%;
+}
+
+/* ? Popular Artists Section */
+#popular-artists .cards-container .card .img-container{
+    object-fit: cover;
+    overflow: hidden;
+    border-radius: 50%;
 }
 
 
