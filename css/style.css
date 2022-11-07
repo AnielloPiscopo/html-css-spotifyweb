@@ -114,9 +114,23 @@ main aside{
 
 
 /* ? CARDS */
+#cards>section{
+    padding: 1.1rem 2rem 0 1.5rem;
+}
 
+#cards span{
+    display: block;
+    padding: 0.5rem 0;
+}
+
+/* ? Section Title */
+#cards .section-title{
+    padding-bottom: 2rem;
+}
+
+/* ? Cards Container */
 #cards .cards-container{
-    padding: 2rem 2rem 1rem 1.5rem;
+    padding-bottom: 1.1rem;
 }
 
 #cards .cards-container .card{
@@ -126,6 +140,10 @@ main aside{
 
 #cards .cards-container .card .img-container img{
     max-width: 100%;
+}
+
+#cards .cards-container .card .card-info{
+    padding-top: 1rem;
 }
 
 /* ? Popular Artists Section */
