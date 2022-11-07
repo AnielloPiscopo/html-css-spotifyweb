@@ -32,6 +32,8 @@ GENERAL STYLES */
     --main-bg-color:#141922;
     --aside-bg-color:#080b12;
     --footer-bg-color:#282828;
+    --main-color-text:#666666;
+    --secondary-color-text:#f0f0f0;
 
 
     /* ? DIMENSIONS */
@@ -48,8 +50,18 @@ body{
     font-family: 'Poppins';
 }
 
+body *{
+    color: var(--main-color-text);
+}
+
 img{
     width: 100%;
+}
+
+h1,
+h2,
+h3{
+    color: var(--secondary-color-text);
 }
 
 
