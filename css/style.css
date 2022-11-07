@@ -1,12 +1,6 @@
 /* !-------------------------------------------------------------------------------------------------------------------------------------------
 MOMENTANEAL CHANGES */
-nav{
-    height: 4rem;
-}
 
-ul{
-    height: 100%;
-}
 
 
 
@@ -140,6 +134,14 @@ main aside{
 
 
 /* ? NAVBAR */
+main nav{
+    height: 4rem;
+}
+
+main nav ul{
+    height: 100%;
+}
+
 main nav ul li{
     margin-right: 1.5rem;
     width: calc(100%/var(nav-li-number) - 1.5rem);
