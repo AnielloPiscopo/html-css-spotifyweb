@@ -40,7 +40,7 @@ GENERAL STYLES */
 
 
     /* ? DIMENSIONS */
-    --header-width: 32px;
+    --header-width: 50px;
     --footer-height: 61px;
     --card-margin:0.5rem;
 }
@@ -141,17 +141,19 @@ main nav ul li{
     margin-right: 1.5rem;
     width: calc(100%/var(nav-li-number) - 1.5rem);
     padding-bottom: 2rem;
+    font-weight: bold;
 }
 
 
 /* ? CARDS */
 #cards>section{
-    padding: 0 2rem 0 1.5rem;
+    padding: 0 1.5rem;
 }
 
 #cards span{
     display: block;
     padding: 0.5rem 0;
+    font-weight: bold;
 }
 
 /* ? Section Title */
@@ -170,7 +172,7 @@ main nav ul li{
 }
 
 #cards .cards-container .card .img-container img{
-    max-width: 100%;
+    max-width: 170px;
 }
 
 #cards .cards-container .card .card-info{
@@ -206,7 +208,7 @@ RESPONSIVENESS */
     
     /* ? ROOT */
     :root{
-        --header-width: 160px;
+        --header-width: 200px;
         --nav-li-number:3;
         --card-margin:1rem;
     }
