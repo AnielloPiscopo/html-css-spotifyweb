@@ -43,6 +43,7 @@ GENERAL STYLES */
     --header-width: 60px;
     --footer-height: 80px;
     --card-margin:0.5rem;
+    --nav-li-margin:1rem;
 }
 
 
@@ -96,6 +97,10 @@ h3{
     justify-content: center;
 }
 
+.d_flex.space-between{
+    justify-content: space-between;
+}
+
 
 /* ? POSITIONS */
 .p_relative{
@@ -108,16 +113,18 @@ h3{
 
 
 /* ? TEXT */
-.text-centered{
-    text-align: center;
-}
-
 .uppercase{
     text-transform: uppercase;
 }
 
-.btn{
-    text-transform: uppercase;
+
+
+/* * COMBINATIONS */
+li a,
+li .icon{
+    display: inline-block;
+    width: 100%;
+    text-align: center;
 }
 
 
@@ -143,8 +150,8 @@ header.d_flex{
 }
 
 header .icon{
-    vertical-align: middle;
-    padding-right: 0.3rem;
+    display: inline-block;
+    width: 100%;
 }
 
 /* ? UPPER PART */
@@ -168,30 +175,16 @@ header nav ul li .icon{
 
 
 /* ? LOWER PART */
-header.p_relative #account-info.p_absolute{
-    bottom: 0;
-    left: 0;
-    right: 0;
-}
-
-#account-info{
-    padding: 0 1rem;
-}
-
-#account-info.d_flex{
-    flex-direction: column;
-    align-items: center;
-}
-
-#account-info .icon-container{
+header .lower-part .icon-container{
     padding: 1rem 0;
 }
 
-#account-info .icon-container .icon{
+header .lower-part .icon-container .icon{
     font-size: 0.7rem;
+    text-align: center;
 }
 
-#account-info .account.icon-container .icon{
+header .lower-part .account.icon-container .icon{
     font-size: 1.2rem;
 }
 
@@ -234,17 +227,16 @@ main nav{
     padding: 1.5rem 2rem 0 2rem;
 }
 
+main nav ul{
+    width: 100%;
+}
+
 main nav ul li{
-    margin-right: 0.5rem;
-    width: calc(100%/var(--nav-li-number) - 0.5rem);
+    margin-right: 1rem;
+    width: calc(100%/var(--nav-li-number) - var(--nav-li-margin));
     padding-bottom: 2rem;
     font-weight: bold;
     font-size: 0.8rem;
-}
-
-main nav ul li a{
-    display: inline-block;
-    width: 100%;
 }
 
 
@@ -272,6 +264,7 @@ main nav ul li a{
 #cards .cards-container .card{
     width: calc(100%/ var(--cards-number) - var(--card-margin));
     margin-right: var(--card-margin);
+    text-align: center;
 }
 
 #cards .cards-container .card .img-container img:not(#cards #popular-artists .cards-container .card .img-container img){
@@ -342,8 +335,18 @@ RESPONSIVENESS */
     }
 
     header .logo-container{
-        width: 70%;
+        width: 100%;
         padding-bottom: 1.5rem;
+    }
+
+    header .icon{
+        vertical-align: middle;
+        padding-right: 0.3rem;
+        display: inline;
+    }
+
+    header a{
+        text-align: left;
     }
 
     header nav{
@@ -372,15 +375,15 @@ RESPONSIVENESS */
         font-size: 0.8rem;
     }
 
-    #account-info.d_flex{
-        display: block;
+    header .lower-part{
+        width: 100%;
     }
 
-    #account-info .d_none{
+    header .lower-part .d_none{
         display: inline-block;
     }
 
-    #account-info .account{
+    header .lower-part .account{
         border-top: 1px solid var(--main-color-text);
     }
 
@@ -425,6 +428,7 @@ RESPONSIVENESS */
         :root{
             --cards-number:6;
             --nav-li-number:6;
+            --nav-li-margin:2rem;
         }
 
 
@@ -435,6 +439,14 @@ RESPONSIVENESS */
 
 
         /* ? MAIN */
+
+        main nav ul{
+            width: 80%;
+        }
+
+        main nav ul li{
+            min-width: 86px;
+        }
 
 
         /* ? FOOTER */
