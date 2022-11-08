@@ -365,6 +365,26 @@ main nav ul li.current-page div{
     color: var(--secondary-color-text);
 }
 
+#player .bar-progress{
+    cursor: pointer;
+}
+
+#player .bar-progress:hover .current-bar-progress{
+    position: relative;
+    background-color: var(--current-page-status);
+}
+
+#player .bar-progress:hover .current-bar-progress::after{
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 900; 
+    content: "\f111";
+    display: inline-block;
+    position: absolute;
+    top: -8px;
+    right: 0;
+    color: var(--secondary-color-text);
+}
+
 
 /* ? PLAYER GENERAL INFO */
 #player_general-info .img-container{
