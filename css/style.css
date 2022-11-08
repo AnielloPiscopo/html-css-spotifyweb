@@ -111,6 +111,16 @@ h3{
 }
 
 
+/* ? POSITIONS */
+.p_relative{
+    position: relative;
+}
+
+.p_absolute{
+    position: absolute;
+}
+
+
 /* ? TEXT */
 .uppercase{
     text-transform: uppercase;
@@ -311,10 +321,24 @@ main nav ul li.current-page div{
     margin-right: var(--card-margin);
     text-align: center;
     font-weight: bold;
+    cursor: pointer;
 }
 
 #cards .cards-container .card .img-container img:not(#cards #popular-artists .cards-container .card .img-container img){
     max-width: 180px;
+}
+
+#cards .cards-container .card:hover .img-container img{
+    filter: opacity(0.5);
+}
+
+#cards .cards-container .card:hover .img-container.p_relative .icon.p_absolute.d_none{
+    top: 50%;
+    left: 50%;
+    display: block;
+    font-size: 5rem;
+    color: var(--secondary-color-text);
+    transform: translate(-50%,-50%);
 }
 
 #cards .cards-container .card .card-info{
