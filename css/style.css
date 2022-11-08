@@ -236,7 +236,7 @@ main nav ul li{
     width: calc(100%/var(--nav-li-number) - var(--nav-li-margin));
     padding-bottom: 2rem;
     font-weight: bold;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
 }
 
 
