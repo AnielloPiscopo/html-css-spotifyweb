@@ -11,6 +11,9 @@
         
         <!-- * EXTERNAL LINKS -->
 
+        <!--? Font Awersome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 
 
         <!-- * INTERNAL LINKS -->
@@ -28,7 +31,99 @@
     <body>
         <div class="container d_flex wrap">
             <!-- * HEADER -->
-            <header></header>
+            <header class="d_flex wrap p_relative">
+                <!-- ? UPPER PART -->
+                <div class="upper-part">
+                    <!-- ? Logo -->
+                    <div class="logo-container">
+                        <img class='d_none' src="assets/img/logo.svg" alt="Logo Spotify con scritta">
+                        <img class='d_block' src="assets/img/logo-small.svg" alt="Logo Spotify senza scritta">
+                    </div>
+
+
+                    <!-- ? Navbar -->
+                    <nav>
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <i class="fa-solid fa-house icon"></i>
+                                    <span class="d_none">Home</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    <i class="fas fa-light fa-magnifying-glass icon"></i>
+                                    <span class="d_none">Cerca</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    <i class="fa-solid fa-book icon"></i>
+                                    <span class="d_none">La tua libreria</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+
+
+                    <!-- ? Playlist Section -->
+                    <section id="playlist" class="d_none">
+                        <h3 class="uppercase">Playlist</h3>
+
+                        <ul>
+                            <li>
+                                <i class="fa-solid fa-square-plus icon"></i>
+                                <span>Crea una playlist</span>
+                            </li>
+
+                            <li>
+                                <span>Nome playlist</span>
+                            </li>
+
+                            <li>
+                                <span>Nome playlist</span>
+                            </li>
+
+                            <li>
+                                <span>Nome playlist</span>
+                            </li>
+
+                            <li>
+                                <span>Nome playlist</span>
+                            </li>
+
+                            <li>
+                                <span>Nome playlist</span>
+                            </li>
+
+                            <li>
+                                <span>Nome playlist</span>
+                            </li>
+
+                            <li>
+                                <span>Nome playlist</span>
+                            </li>
+                        </ul>
+                    </section>
+                </div>
+
+
+                <!-- ? LOWER PART OF THE HEADER -->
+                <div class="d_flex lower-part">
+                    <div class="icon-container">
+                        <i class="fa-regular fa-circle-down icon"></i>
+                        <span class="d_none">Installa app</span>
+                    </div>
+
+
+                    <div class="icon-container account">
+                        <i class="fa-regular fa-circle-user icon"></i>
+                        <span class="d_none">John Doe</span>
+                    </div>
+                </div>
+            </header>
 
 
 
@@ -46,12 +141,12 @@
                 <!-- ? NAVBAR -->
                 <nav>
                     <ul class="d_flex wrap uppercase center">
-                        <li><a href="#">In evidenza</a></li>
-                        <li><a href="#">Podcast</a></li>
-                        <li><a href="#">Classifiche</a></li>
-                        <li><a href="#">Generi e Mood</a></li>
-                        <li><a href="#">Nuove Uscite</a></li>
-                        <li><a href="#">Scopri</a></li>
+                        <li><a href="#" class="text-centered">In evidenza</a></li>
+                        <li><a href="#" class="text-centered">Podcast</a></li>
+                        <li><a href="#" class="text-centered">Classifiche</a></li>
+                        <li><a href="#" class="text-centered">Generi e Mood</a></li>
+                        <li><a href="#" class="text-centered">Nuove Uscite</a></li>
+                        <li><a href="#" class="text-centered">Scopri</a></li>
                     </ul>
                 </nav>
 

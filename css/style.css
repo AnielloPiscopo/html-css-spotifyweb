@@ -40,8 +40,8 @@ GENERAL STYLES */
 
 
     /* ? DIMENSIONS */
-    --header-width: 50px;
-    --footer-height: 100px;
+    --header-width: 60px;
+    --footer-height: 80px;
     --card-margin:0.5rem;
 }
 
@@ -50,7 +50,7 @@ GENERAL STYLES */
 /* * TAG HTML */
 body{
     font-family: 'Poppins';
-    min-width: 535px;
+    min-width: 580px;
 }
 
 body *{
@@ -80,6 +80,10 @@ h3{
 /* * CLASSES */
 
 /* ? DISPLAYS */
+.d_none{
+    display: none;
+}
+
 .d_flex{
     display: flex;
 }
@@ -90,6 +94,16 @@ h3{
 
 .d_flex.center{
     justify-content: center;
+}
+
+
+/* ? POSITIONS */
+.p_relative{
+    position: relative;
+}
+
+.p_absolute{
+    position: absolute;
 }
 
 
@@ -123,6 +137,64 @@ header{
     height: calc(100vh - var(--footer-height));
 }
 
+header.d_flex{
+    flex-direction: column;
+    align-items: center;
+}
+
+header .icon{
+    vertical-align: middle;
+    padding-right: 0.3rem;
+}
+
+/* ? UPPER PART */
+
+/* * Logo */
+header .logo-container{
+    width: calc(var(--footer-height)/2.5);
+    padding-top: 0.5rem;
+    padding-bottom: 1rem;
+}
+
+
+/* * Navbar */
+header nav ul li{
+    padding-bottom: 1rem;
+}
+
+header nav ul li .icon{
+    font-size: 1.2rem;
+}
+
+
+/* ? LOWER PART */
+header.p_relative #account-info.p_absolute{
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#account-info{
+    padding: 0 1rem;
+}
+
+#account-info.d_flex{
+    flex-direction: column;
+    align-items: center;
+}
+
+#account-info .icon-container{
+    padding: 1rem 0;
+}
+
+#account-info .icon-container .icon{
+    font-size: 0.7rem;
+}
+
+#account-info .account.icon-container .icon{
+    font-size: 1.2rem;
+}
+
 
 
 /* * MAIN */
@@ -131,6 +203,7 @@ main{
     height: calc(100vh - var(--footer-height));
     width: calc(100% - var(--header-width));
     overflow-y: auto;
+    font-size: 0.8rem;
 }
 
 /* ? ASIDE */
@@ -146,8 +219,9 @@ main aside.d_flex{
 main aside .btn{
     color: var(--secondary-color-text);
     border: 1px solid var(--secondary-color-text);
-    padding: 1rem 3rem;
+    padding: 0.7rem 3rem;
     border-radius: 20rem;
+    margin-right: 1rem;
 }
 
 main aside.d_flex .btn{
@@ -161,11 +235,16 @@ main nav{
 }
 
 main nav ul li{
-    margin-right: 1.5rem;
-    width: calc(100%/var(nav-li-number) - 1.5rem);
+    margin-right: 0.5rem;
+    width: calc(100%/var(--nav-li-number) - 0.5rem);
     padding-bottom: 2rem;
     font-weight: bold;
     font-size: 0.8rem;
+}
+
+main nav ul li a{
+    display: inline-block;
+    width: 100%;
 }
 
 
@@ -195,12 +274,16 @@ main nav ul li{
     margin-right: var(--card-margin);
 }
 
-#cards .cards-container .card .img-container img{
-    max-width: 170px;
+#cards .cards-container .card .img-container img:not(#cards #popular-artists .cards-container .card .img-container img){
+    max-width: 180px;
 }
 
 #cards .cards-container .card .card-info{
     padding-top: 1rem;
+}
+
+#cards .cards-container .card .card-info h3{
+    line-height: 1.2rem;
 }
 
 /* ? Popular Artists Section */
@@ -232,7 +315,7 @@ RESPONSIVENESS */
     
     /* ? ROOT */
     :root{
-        --header-width: 200px;
+        --header-width: 250px;
         --nav-li-number:3;
         --card-margin:1rem;
     }
@@ -242,6 +325,64 @@ RESPONSIVENESS */
     /* * SPECIFIC STYLES */
     
     /* ? HEADER */
+    header{
+        padding: 1rem;
+    }
+
+    header.d_flex{
+        align-items: flex-start;
+    }
+
+    header .d_none{
+        display: block;
+    }
+
+    header .d_block{
+        display: none;
+    }
+
+    header .logo-container{
+        width: 70%;
+        padding-bottom: 1.5rem;
+    }
+
+    header nav{
+        padding-bottom: 1rem;
+    }
+
+    header nav ul .d_none{
+        display: inline-block;
+    }
+
+    header nav ul li span{
+        vertical-align: bottom;
+    }
+
+    #playlist h3{
+        padding-bottom: 1rem;
+        font-size: 1rem;
+    }
+
+    #playlist .icon{
+        font-size: 2.5rem;
+    }
+
+    #playlist ul li{
+        padding-bottom: 1rem;
+        font-size: 0.8rem;
+    }
+
+    #account-info.d_flex{
+        display: block;
+    }
+
+    #account-info .d_none{
+        display: inline-block;
+    }
+
+    #account-info .account{
+        border-top: 1px solid var(--main-color-text);
+    }
 
 
     /* ? MAIN */
