@@ -32,6 +32,7 @@ GENERAL STYLES */
     --player-bg-color:#282828;
     --main-color-text:#666666;
     --secondary-color-text:#f0f0f0;
+    --current-page-status:#9be52d;
 
 
     /* ? NUMBERS */
@@ -64,6 +65,10 @@ img{
 
 ul{
     list-style: none;
+}
+
+li{
+    cursor: pointer;
 }
 
 a{
@@ -112,6 +117,16 @@ h3{
 }
 
 
+/* ? OTHER */
+.bar-progress{
+    height: 2px;
+}
+
+.current-page div{
+    background-color: var(--current-page-status);
+}
+
+
 
 /* * COMBINATIONS */
 li a,
@@ -119,6 +134,13 @@ li .icon{
     display: inline-block;
     width: 100%;
     text-align: center;
+}
+
+li:hover,
+li:hover a,
+li:hover .icon,
+li:hover span{
+    color: var(--secondary-color-text);
 }
 
 
@@ -148,6 +170,7 @@ header .icon{
     width: 100%;
 }
 
+
 /* ? UPPER PART */
 
 /* * Logo */
@@ -163,22 +186,38 @@ header nav ul li{
     padding-bottom: 1rem;
 }
 
+header nav ul li.current-page *{
+    color: var(--secondary-color-text);
+}
+
 header nav ul li .icon{
     font-size: 1.3rem;
 }
 
 
 /* ? LOWER PART */
-header .lower-part .icon-container{
+header .lower-part .icons-container{
     padding: 1rem 0;
 }
 
-header .lower-part .icon-container .icon{
+header .lower-part .icons-container .icon{
     font-size: 0.7rem;
     text-align: center;
 }
 
-header .lower-part .account.icon-container .icon{
+header .lower-part .icons-container:first-of-type{
+    cursor: pointer;
+}
+
+header .lower-part .icons-container:first-of-type:hover .icon{
+    color: var(--secondary-color-text);
+}
+
+header .lower-part .account *{
+    color: var(--secondary-color-text);
+}
+
+header .lower-part .account.icons-container .icon{
     font-size: 2rem;
 }
 
@@ -216,6 +255,11 @@ main aside.d_flex .btn{
     align-self:center;
 }
 
+main aside .btn:hover{
+    padding: 0.8rem 3.1rem;
+    font-size: 1rem;
+}
+
 
 /* ? NAVBAR */
 main nav{
@@ -232,6 +276,12 @@ main nav ul li{
     padding-bottom: 2rem;
     font-weight: bold;
     font-size: 0.7rem;
+}
+
+main nav ul li.current-page div{
+    width: 25%;
+    margin: 0 auto;
+    margin-top: 0.2rem;
 }
 
 
@@ -299,13 +349,20 @@ main nav ul li{
 #player .bar-progress{
     display: inline-block;
     background-color: var(--main-color-text);
-    height: 5px;
 }
 
 #player .current-bar-progress{
     background-color: var(--secondary-color-text);
     width: 30%;
     height: 100%;
+}
+
+#player .icon{
+    cursor: pointer;
+}
+
+#player .icon:hover{
+    color: var(--secondary-color-text);
 }
 
 
@@ -321,10 +378,15 @@ main nav ul li{
     margin-right: 0.5rem;
 }
 
+#player_general-info .song-info span:hover{
+    color: var(--secondary-color-text);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
 #player_general-info .icon{
     display: block;
     margin: 0.2rem 1rem;
-    font-size: 0.7rem;
 }
 
 
@@ -347,10 +409,24 @@ main nav ul li{
     font-size: 1.5rem;
 }
 
+#player_music-bar .upper-part .icon.big:hover{
+    font-size: 1.6rem;
+}
+
 /* * Lower Part */
 #player_music-bar .lower-part{
     width: 100%;
     margin-top: 0.5rem;
+}
+
+#player_music-bar .lower-part span{
+    color: var(--secondary-color-text);
+    font-size: 0.7rem;
+}
+
+#player_music-bar .lower-part .bar-progress{
+    width: 70%;
+    vertical-align: middle;
 }
 
 
@@ -364,6 +440,7 @@ main nav ul li{
     padding: 0 0.2rem;
     font-size: 0.7rem;
 }
+
 #player_options .bar-progress{
     width: 80px;
 }
@@ -392,11 +469,21 @@ RESPONSIVENESS */
     
     /* ? HEADER */
     header{
-        padding: 1rem;
+        padding-top: 1rem;
     }
 
     header.d_flex{
         align-items: flex-start;
+    }
+
+    header>.upper-part,
+    header>.lower-part{
+        width: 100%;
+    }
+
+    header>.lower-part,
+    header>.upper-part>*:not(nav){
+        padding-left: 1rem;
     }
 
     header .d_none{
@@ -408,7 +495,7 @@ RESPONSIVENESS */
     }
 
     header .logo-container{
-        width: 100%;
+        width: 70%;
         padding-bottom: 1.5rem;
     }
 
@@ -430,8 +517,25 @@ RESPONSIVENESS */
         display: inline-block;
     }
 
+    header nav ul li{
+        width: 100%;
+        margin-left: 0.1rem;
+    }
+
+    header nav ul li a{
+        padding-left: 1rem;
+    }
+
     header nav ul li span{
         vertical-align: bottom;
+    }
+
+    header nav ul li.current-page{
+        border-left: 3px solid var(--current-page-status);
+    }
+
+    header nav ul li.current-page *{
+        color: var(--main-color-text);
     }
 
     #playlist h3{
@@ -454,6 +558,14 @@ RESPONSIVENESS */
 
     header .lower-part .d_none{
         display: inline-block;
+    }
+
+    header .lower-part .icons-container:first-of-type:hover .icon{
+        color: var(--main-color-text);
+    }
+
+    header .lower-part .icons-container:first-of-type:hover span{
+        color: var(--secondary-color-text);
     }
 
     header .lower-part .account{
@@ -501,6 +613,16 @@ RESPONSIVENESS */
         
         #player_options.d_flex{
             justify-content: flex-end;
+        }
+
+        #player_music-bar .lower-part .bar-progress{
+            width: 80%;
+        }
+
+        #player_options .icon{
+            color: var(--secondary-color-text);
+            padding: 0 0.5rem;
+            font-size: 0.7rem;
         }
 }
 
