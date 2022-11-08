@@ -29,7 +29,7 @@ GENERAL STYLES */
     --header-bg-color: black;
     --main-bg-color:#141922;
     --aside-bg-color:#080b12;
-    --footer-bg-color:#282828;
+    --player-bg-color:#282828;
     --main-color-text:#666666;
     --secondary-color-text:#f0f0f0;
 
@@ -41,7 +41,7 @@ GENERAL STYLES */
 
     /* ? DIMENSIONS */
     --header-width: 60px;
-    --footer-height: 80px;
+    --player-height: 80px;
     --card-margin:0.5rem;
     --nav-li-margin:1rem;
 }
@@ -101,14 +101,8 @@ h3{
     justify-content: space-between;
 }
 
-
-/* ? POSITIONS */
-.p_relative{
-    position: relative;
-}
-
-.p_absolute{
-    position: absolute;
+.d_flex.align-center{
+    align-items: center;
 }
 
 
@@ -141,7 +135,7 @@ SPECIFIC STYLES */
 header{
     background-color: var(--header-bg-color);
     width: var(--header-width);
-    height: calc(100vh - var(--footer-height));
+    height: calc(100vh - var(--player-height));
 }
 
 header.d_flex{
@@ -158,7 +152,7 @@ header .icon{
 
 /* * Logo */
 header .logo-container{
-    width: calc(var(--footer-height)/2.5);
+    width: calc(var(--player-height)/2.5);
     padding-top: 0.5rem;
     padding-bottom: 1rem;
 }
@@ -193,7 +187,7 @@ header .lower-part .account.icon-container .icon{
 /* * MAIN */
 main{
     background-color: var(--main-bg-color);
-    height: calc(100vh - var(--footer-height));
+    height: calc(100vh - var(--player-height));
     width: calc(100% - var(--header-width));
     overflow-y: auto;
     font-size: 0.8rem;
@@ -201,7 +195,7 @@ main{
 
 /* ? ASIDE */
 main aside{
-    height: var(--footer-height);
+    height: var(--player-height);
     background-color: var(--aside-bg-color);
 }
 
@@ -276,7 +270,7 @@ main nav ul li{
 }
 
 #cards .cards-container .card .card-info h3{
-    line-height: 1.2rem;
+    line-height: 1rem;
 }
 
 /* ? Popular Artists Section */
@@ -288,11 +282,45 @@ main nav ul li{
 
 
 
-/* * FOOTER */
-footer{
-    background-color: var(--footer-bg-color);
+/* * PLAYER */
+#player{
+    background-color: var(--player-bg-color);
     width: 100%;
-    height: var(--footer-height);
+    height: var(--player-height);
+}
+
+#player>*{
+    width: calc(100%/3);
+    text-align: center;
+}
+
+#player .bar-progress{
+    display: inline-block;
+    background-color: var(--main-color-text);
+    height: 5px;
+}
+
+#player .current-bar-progress{
+    background-color: var(--secondary-color-text);
+    width: 10%;
+    height: 100%;
+}
+
+/* ? PLAYER GENERAL INFO */
+#player_general-info .img-container{
+    width: 2.5rem;
+}
+
+
+/* ? PLAYER MUSIC BAR */
+#player_music-bar .lower-part{
+    width: 100%;
+}
+
+
+/* ? PLAYER OPTIONS */
+#player_options .bar-progress{
+    width: 200px;
 }
 
 
@@ -391,7 +419,7 @@ RESPONSIVENESS */
     /* ? MAIN */
 
 
-    /* ? FOOTER */
+    /* ? PLAYER */
 }
 
 
@@ -416,7 +444,7 @@ RESPONSIVENESS */
         /* ? MAIN */
 
 
-        /* ? FOOTER */
+        /* ? PLAYER */
 }
 
 
@@ -449,5 +477,5 @@ RESPONSIVENESS */
         }
 
 
-        /* ? FOOTER */
+        /* ? PLAYER */
 }
