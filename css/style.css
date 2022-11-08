@@ -164,7 +164,7 @@ header nav ul li{
 }
 
 header nav ul li .icon{
-    font-size: 1.2rem;
+    font-size: 1.3rem;
 }
 
 
@@ -179,7 +179,7 @@ header .lower-part .icon-container .icon{
 }
 
 header .lower-part .account.icon-container .icon{
-    font-size: 1.2rem;
+    font-size: 2rem;
 }
 
 
@@ -191,6 +191,7 @@ main{
     width: calc(100% - var(--header-width));
     overflow-y: auto;
     font-size: 0.8rem;
+    
 }
 
 /* ? ASIDE */
@@ -245,12 +246,12 @@ main nav ul li{
     font-weight: bold;
 }
 
-/* ? Section Title */
+/* * Section Title */
 #cards .section-title{
     padding-bottom: 2rem;
 }
 
-/* ? Cards Container */
+/* * Cards Container */
 #cards .cards-container{
     padding-bottom: 2rem;
 }
@@ -259,6 +260,7 @@ main nav ul li{
     width: calc(100%/ var(--cards-number) - var(--card-margin));
     margin-right: var(--card-margin);
     text-align: center;
+    font-weight: bold;
 }
 
 #cards .cards-container .card .img-container img:not(#cards #popular-artists .cards-container .card .img-container img){
@@ -273,7 +275,7 @@ main nav ul li{
     line-height: 1rem;
 }
 
-/* ? Popular Artists Section */
+/* * Popular Artists Section */
 #popular-artists .cards-container .card .img-container{
     object-fit: cover;
     overflow: hidden;
@@ -287,11 +289,11 @@ main nav ul li{
     background-color: var(--player-bg-color);
     width: 100%;
     height: var(--player-height);
+    padding: 0 0.7rem;
 }
 
 #player>*{
     width: calc(100%/3);
-    text-align: center;
 }
 
 #player .bar-progress{
@@ -302,25 +304,68 @@ main nav ul li{
 
 #player .current-bar-progress{
     background-color: var(--secondary-color-text);
-    width: 10%;
+    width: 30%;
     height: 100%;
 }
+
 
 /* ? PLAYER GENERAL INFO */
 #player_general-info .img-container{
     width: 2.5rem;
+    margin-right: 0.5rem;
+}
+
+#player_general-info .song-info{
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-right: 0.5rem;
+}
+
+#player_general-info .icon{
+    display: block;
+    margin: 0.2rem 1rem;
+    font-size: 0.7rem;
 }
 
 
 /* ? PLAYER MUSIC BAR */
+#player_music-bar{
+    text-align: center;
+}
+
+/* * Upper Part */
+#player_music-bar .upper-part .icon{
+    color: var(--secondary-color-text);
+    margin: 0 0.8rem;
+}
+
+#player_music-bar .upper-part .icon.small{
+    font-size: 0.7rem;
+}
+
+#player_music-bar .upper-part .icon.big{
+    font-size: 1.5rem;
+}
+
+/* * Lower Part */
 #player_music-bar .lower-part{
     width: 100%;
+    margin-top: 0.5rem;
 }
 
 
 /* ? PLAYER OPTIONS */
+#player_options.d_flex{
+    justify-content: center;
+}
+
+#player_options .icon{
+    color: var(--secondary-color-text);
+    padding: 0 0.2rem;
+    font-size: 0.7rem;
+}
 #player_options .bar-progress{
-    width: 200px;
+    width: 80px;
 }
 
 
@@ -400,7 +445,7 @@ RESPONSIVENESS */
 
     #playlist ul li{
         padding-bottom: 1rem;
-        font-size: 0.8rem;
+        font-size: 0.7rem;
     }
 
     header .lower-part{
@@ -445,6 +490,18 @@ RESPONSIVENESS */
 
 
         /* ? PLAYER */
+        #player_general-info .song-info{
+            margin-right: 1.5rem;
+        }
+
+        #player_general-info .icon{
+            display: inline-block;
+            margin: 0 0.3rem;
+        }
+        
+        #player_options.d_flex{
+            justify-content: flex-end;
+        }
 }
 
 
