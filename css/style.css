@@ -170,6 +170,10 @@ header{
     height: calc(100vh - var(--player-height));
 }
 
+header.p_relative{
+    z-index: 1;
+}
+
 header.d_flex{
     flex-direction: column;
     align-items: center;
@@ -193,26 +197,33 @@ header .logo-container{
 
 /* * Navbar */
 header nav ul li{
-    padding-bottom: 1rem;
+    margin-bottom: 1rem;
 }
 
-header nav ul li.current-page *{
+header nav ul li.current-page>*{
     color: var(--secondary-color-text);
 }
 
 header nav ul li .icon{
-    font-size: 1.3rem;
+    display: inline-block;
+    width: 1.7rem;
+    background-color: var(--header-bg-color);
 }
 
 
 /* ? LOWER PART */
+header .lower-part.d_flex{
+    flex-direction: column;
+    justify-content: center;
+}
+
 header .lower-part .icons-container{
     padding: 1rem 0;
 }
 
 header .lower-part .icons-container .icon{
-    font-size: 0.7rem;
-    text-align: center;
+    display: inline-block;
+    width: 1.2rem;
 }
 
 header .lower-part .icons-container:first-of-type{
@@ -228,7 +239,11 @@ header .lower-part .account *{
 }
 
 header .lower-part .account.icons-container .icon{
-    font-size: 2rem;
+    width: 1.5rem;
+    background-color: var(--main-color-text);
+    border-radius: 100%;
+    overflow: hidden;
+    object-fit: fill;
 }
 
 
@@ -364,6 +379,10 @@ main nav ul li.current-page div{
     width: 100%;
     height: var(--player-height);
     padding: 0 0.7rem;
+}
+
+#player.p_relative{
+    z-index: 2;
 }
 
 #player>*{
@@ -544,13 +563,16 @@ RESPONSIVENESS */
     }
 
     header .icon{
-        vertical-align: middle;
         padding-right: 0.3rem;
         display: inline;
     }
 
     header a{
         text-align: left;
+    }
+
+    header .icon + span{
+        vertical-align: super;
     }
 
     header nav{
@@ -570,10 +592,6 @@ RESPONSIVENESS */
         padding-left: 1rem;
     }
 
-    header nav ul li span{
-        vertical-align: bottom;
-    }
-
     header nav ul li.current-page{
         border-left: 3px solid var(--current-page-status);
     }
@@ -588,7 +606,11 @@ RESPONSIVENESS */
     }
 
     #playlist .icon{
-        font-size: 2.5rem;
+        font-size: 2.2rem;
+    }
+
+    #playlist .icon + span{
+        font-size: 1rem;
     }
 
     #playlist ul li{
@@ -600,8 +622,16 @@ RESPONSIVENESS */
         width: 100%;
     }
 
+    header .lower-part.d_flex{
+        justify-content: flex-start;
+    }
+
     header .lower-part .d_none{
         display: inline-block;
+    }
+
+    header .lower-part .icons-container{
+        width: 90%;
     }
 
     header .lower-part .icons-container:first-of-type:hover .icon{
@@ -615,6 +645,12 @@ RESPONSIVENESS */
     header .lower-part .account{
         border-top: 1px solid var(--main-color-text);
     }
+
+    header .lower-part .account.icons-container .icon{
+        padding-left: 0.2rem;
+        margin-right: 0.2rem;
+    }
+    
 
 
     /* ? MAIN */
